@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<manifest> 
+	<remote  name="yocto" fetch="git://git.yoctoproject.org/" />
+	<remote  name="oe" fetch="git://git.openembedded.org/" />
+	<remote  name="qt5" fetch="https://github.com/meta-qt5/" />
+	<remote  name="agl" fetch="https://gerrit.automotivelinux.org/gerrit/AGL/" />
+	<remote  name="watatuki" fetch="https://github.com/watatuki/" />
+
+	<default revision="master" /> 
+
+	<!-- Yocto Layers --> 
+	<project path="poky" name="poky" remote="yocto" revision="3b223f75eec1738fbc913858e8e11c8305e3edcb" /> 
+	<project path="meta-openembedded" name="meta-openembedded" remote="oe" revision="dc5634968b270dde250690609f0015f881db81f2" />
+	<project path="meta-qt5" name="meta-qt5.git" remote="qt5" revision="9bfcf79fcd824efb9f2a9bd72ecbedfee1315c96" />
+
+	<project path="meta-agl" name="meta-agl" remote="agl" revision="20dfa8d262d6de0c689cce0d8fc0b76a40ba5a75" />
+	<project path="meta-agl-demo" name="meta-agl-demo" remote="agl" revision="af16a40f5c45cb34c1bc7efbe9700d29191d81bf" />
+
+	<!-- BSP Layers --> 
+	<project path="meta-jetson" name="meta-jetson" remote="watatuki" revision="master" />
+
+</manifest> 
