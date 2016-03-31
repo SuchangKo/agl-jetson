@@ -79,5 +79,11 @@ login by root
 
 cd /opt/AGL/CES2016
 
+./switch_to_ivi-shell.sh
+
+/etc/init.d/weston stop
+
+/etc/init.d/weston start
+
 ./start_CES2016_ivi-shell.sh
 
