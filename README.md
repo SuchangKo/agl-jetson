@@ -64,9 +64,7 @@ cd /mnt/sdcard
 
 sudo tar xvjf /path/to/work/agl-k1/tmp/deploy/images/jetson-tk1-upstream/agl-demo-platform-jetson-tk1-upstream.tar.bz2
 
-sudo mv etc/rcS.d/S00psplash.sh etc/rcS.d/_S00psplash.sh
-
-sudo cp /path/to/work/agl-jetson-tk1/start_CES2016_ivi-shell.sh opt/AGL/CES2016/
+sudo rm lib/systemd/system/psplash-*
 
 sudo sync
 
@@ -80,10 +78,6 @@ login by root
 cd /opt/AGL/CES2016
 
 ./switch_to_ivi-shell.sh
-
-/etc/init.d/weston stop
-
-/etc/init.d/weston start
 
 ./start_CES2016_ivi-shell.sh
 
