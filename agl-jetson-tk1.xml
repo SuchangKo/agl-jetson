@@ -17,6 +17,6 @@
 	<project path="meta-agl-demo" name="meta-agl-demo" remote="agl" revision="af16a40f5c45cb34c1bc7efbe9700d29191d81bf" />
 
 	<!-- BSP Layers --> 
-	<project path="meta-jetson" name="meta-jetson" remote="watatuki" revision="master" />
+	<project path="meta-jetson" name="meta-jetson" remote="watatuki" revision="f8735334c13783b86cbd52e3677af94149469884" />
 
 </manifest> 
