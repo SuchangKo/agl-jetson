@@ -29,7 +29,7 @@ http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/l4t_quick_sta
 At that time, you will need to replace command "sudo ./flash.sh ${BOARD} mmcblk0p1" to "sudo ./flash.sh 1jetson-tk1 mmcblk1p1".
 
 
-Jetson TK1 exsample Yocto Distro
+Build AGL Distro
 ====================================================================
 cd /path/to/work
 
@@ -42,8 +42,6 @@ repo sync
 source poky/oe-init-build-env agl-k1
 
 cp ../agl-jetson-tk1/conf/* conf/
-
-rm -R ../meta-agl/meta-ivi-common/recipes-multimedia/gstreamer/
 
 bitbake agl-demo-platform
 
@@ -63,8 +61,6 @@ sudo mount /dev/sdb1 /mnt/sdcard
 cd /mnt/sdcard
 
 sudo tar xvjf /path/to/work/agl-k1/tmp/deploy/images/jetson-tk1-upstream/agl-demo-platform-jetson-tk1-upstream.tar.bz2
-
-sudo rm lib/systemd/system/psplash-*
 
 sudo sync
 
