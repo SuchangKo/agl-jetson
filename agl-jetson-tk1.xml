@@ -19,6 +19,6 @@
 	<project path="meta-rust" name="meta-rust" remote="konsulko" revision="395cde581938d862abb6a9219c0118c81cf01da2" />
 
 	<!-- BSP Layers --> 
-	<project path="meta-jetson" name="meta-jetson" remote="watatuki" revision="4c682fdbb4040d6c9ef10aff180f43df23196eda" />
+	<project path="meta-jetson" name="meta-jetson" remote="watatuki" revision="b0b8174f17c75a0159cd2e6716530ec31aab8222" />
 
 </manifest> 
