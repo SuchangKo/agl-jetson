@@ -14,8 +14,8 @@
 	<project path="meta-openembedded" name="meta-openembedded" remote="oe" revision="8ab04afbffb4bc5184cfe0655049de6f44269990" />
 	<project path="meta-qt5" name="meta-qt5.git" remote="qt5" revision="ea37a0bc987aa9484937ad68f762b4657c198617" />
 
-	<project path="meta-agl" name="meta-agl" remote="agl" revision="641df47d096fb559d6f4f444670205e4510d6791" />
-	<project path="meta-agl-demo" name="meta-agl-demo" remote="agl" revision="0b5dde065fc42a8efa898a2e766d4b484acb28d2" />
+	<project path="meta-agl" name="meta-agl" remote="agl" revision="cc54151075a7f8b8d7c45e2bee83950e683c4f14" />
+	<project path="meta-agl-demo" name="meta-agl-demo" remote="agl" revision="9a319937529cca7e263e987b85cb9d6fca0b468c" />
 	<project path="meta-rust" name="meta-rust" remote="konsulko" revision="395cde581938d862abb6a9219c0118c81cf01da2" />
 
 	<!-- BSP Layers --> 
