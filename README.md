@@ -29,19 +29,20 @@ http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/l4t_quick_sta
 At that time, you will need to replace command "sudo ./flash.sh ${BOARD} mmcblk0p1" to "sudo ./flash.sh 1jetson-tk1 mmcblk1p1".
 
 
-Build AGL Distro
+Build AGL Distro (chinook)
 ====================================================================
 cd /path/to/work
 
 git clone https://github.com/watatuki/agl-jetson-tk1.git
+git clone https://github.com/watatuki/meta-jetson.git -b chinook
 
-repo init -u https://github.com/watatuki/agl-jetson-tk1.git -m agl-jetson-tk1.xml
+repo init -b chinook -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
 
 repo sync
 
-source poky/oe-init-build-env agl-k1
+cp -R agl-jetson-tk1/meta-agl/templates/machine/jetson-tk1 meta-agl/templates/machine/
 
-cp ../agl-jetson-tk1/conf/* conf/
+source meta-agl/scripts/aglsetup.sh -m jetson-tk1 agl-demo agl-appfw-smack
 
 bitbake agl-demo-platform
 
@@ -71,9 +72,8 @@ Power ON
 
 login by root
 
-cd /opt/AGL/CES2016
+cd /usr/AGL/apps
+./installAllApps.sh
 
-./switch_to_ivi-shell.sh
-
-./start_CES2016_ivi-shell.sh
+reboot
 
