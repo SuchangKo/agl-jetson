@@ -33,10 +33,30 @@ Build AGL Distro (chinook)
 ====================================================================
 cd /path/to/work
 
-git clone https://github.com/watatuki/agl-jetson-tk1.git
+git clone https://github.com/watatuki/agl-jetson-tk1.git -b chinook
+
 git clone https://github.com/watatuki/meta-jetson.git -b chinook
 
 repo init -b chinook -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
+
+repo sync
+
+cp -R agl-jetson-tk1/meta-agl/templates/machine/jetson-tk1 meta-agl/templates/machine/
+
+source meta-agl/scripts/aglsetup.sh -m jetson-tk1 agl-demo agl-appfw-smack
+
+bitbake agl-demo-platform
+
+
+Build AGL Distro (master) I's unstable
+====================================================================
+cd /path/to/work
+
+git clone https://github.com/watatuki/agl-jetson-tk1.git
+
+git clone https://github.com/watatuki/meta-jetson.git
+
+repo init -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
 
 repo sync
 
