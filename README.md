@@ -56,8 +56,7 @@ git clone https://github.com/watatuki/agl-jetson.git
 
 git clone https://github.com/watatuki/meta-jetson.git
 
-#repo init -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
-
+<!-- repo init -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo -->
 repo init -b sandbox/ronan/sandbox_rcargen3_v2.16.0 -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
 
 repo sync
