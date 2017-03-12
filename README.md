@@ -33,15 +33,15 @@ Build AGL Distro
 ====================================================================
 cd /path/to/work
 
-git clone https://github.com/watatuki/agl-jetson-tk1.git
+git clone https://github.com/watatuki/agl-jetson.git -b blowfish
 
-repo init -u https://github.com/watatuki/agl-jetson-tk1.git -m agl-jetson-tk1.xml
+repo init -u https://github.com/watatuki/agl-jetson.git -m agl-jetson-tk1.xml
 
 repo sync
 
 source poky/oe-init-build-env agl-k1
 
-cp ../agl-jetson-tk1/conf/* conf/
+cp ../agl-jetson/conf/* conf/
 
 bitbake agl-demo-platform
 
